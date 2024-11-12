@@ -5,6 +5,7 @@
 body {
   font-family: $font;
   font-weight: 400;
+  background-color: #1F2023;
 }
 
 a {
@@ -28,17 +29,6 @@ a {
         z-index: -1;
         background-color: $accent; 
     }
-    &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 24px;
-        background-image: url(../images/header-corners.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        bottom: -24px;
-    }
   &__logo {
     background-color: $accent; 
     padding: 20px 45px 0 45px;
@@ -54,6 +44,17 @@ a {
         right: -59px;
         top: 0;
     }
+    &::before {
+        content: '';
+        width: 25px;
+        height: 24px;
+        background-image: url(../images/header-corner.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 0;
+        bottom: -24px;
+    }
   }
   &__link {
     font-size: 20px;
@@ -62,7 +63,7 @@ a {
     padding: 20px 45px 0 45px;
     border-radius: 0 10px 0 0;
     position: relative;
-    &::before {
+    &::after {
         content: '';
         display: block;
         width: 59px;
@@ -73,5 +74,56 @@ a {
         top: 0;
         transform: scaleX(-1); // Flip horizontally
     }
+    &::before {
+      content: '';
+      width: 25px;
+      height: 24px;
+      background-image: url(../images/header-corner.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 0;
+      bottom: -24px;
+      transform: scaleX(-1); // Flip horizontally
+  }
   }
 }
+.container {
+  width: 100%;
+  max-width: 1830px; 
+  margin: 0 auto; 
+  padding-left: 15px; 
+  padding-right: 15px;
+}
+.banner {
+  display: flex;
+  padding: 40px;
+  background-color: #1F2023;
+  border-radius: 50px;
+  color: #ffffff;
+
+  &__main {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__title {
+      font-size: 64px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: $light;
+      line-height: 110%;
+      letter-spacing: 0%;
+    }
+    &__text{
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: $light;
+    }
+  }
+}
+    
