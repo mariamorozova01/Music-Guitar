@@ -6,6 +6,7 @@ body {
   font-family: $font;
   font-weight: 400;
   background-color: #1F2023;
+  color: $light;
 }
 
 a {
@@ -17,7 +18,9 @@ a {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     &::before {
         display: block;
         content: '';
@@ -94,35 +97,93 @@ a {
   margin: 0 auto; 
   padding-left: 15px; 
   padding-right: 15px;
+  box-sizing: border-box;
 }
 .banner {
+  margin-top: 135px;
   display: flex;
-  padding: 40px;
+  padding: 100px 50px 100px 50px;
   background-color: #1F2023;
   border-radius: 50px;
   color: #ffffff;
-
+  background-image: url(../images/bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: linear-gradient(163.24deg, rgba(0, 0, 0, 0) 62.962%,rgba(0, 0, 0, 0.5) 13.121%);
+  
   &__main {
-    max-width: 600px;
+    max-width: 1031px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-basis: 60%;
+
   }
     &__title {
     font-size: 64px;
     font-weight: 700;
-    margin-bottom: 20px;
-    color: $light;
+    margin: 0 0 20px 0;
     line-height: 110%;
     letter-spacing: 0%;
     }
-    &__text{
+    &__text {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
     color: $light;
     }
+    &__btn {
+      color: $light;
+      padding: 54px 0;
+      display: block;
+      width: 100%;
+      background-color: $accent;
+      border: 1px solid $accent;
+      border-radius: 20px;
+      transition: $tr;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 110%;
+      letter-spacing: 5%;
+      text-transform: uppercase;
+      cursor: pointer;
+      @media(hover: hover) {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    }
+    
+}
+.banner-box {
+  border: 1px solid $light;
+  border-radius: 20px;
+  padding: 30px 332px 30px 30px;
+  position: relative;
+  
+  &__title {
+    margin: 0 0 30px 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 5%;
+    text-transform: uppercase;
   }
+  &__text {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+  }
+  &__img {
+    position: absolute;
+    top: -68px;
+    right: -21px;
+    width: 336.8px;
+    height: 273.87px;
+  }
+}
     
