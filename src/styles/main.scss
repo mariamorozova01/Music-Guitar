@@ -106,19 +106,43 @@ a {
   background-color: #1F2023;
   border-radius: 50px;
   color: #ffffff;
+  gap: 50px;
   background-image: url(../images/bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: linear-gradient(163.24deg, rgba(0, 0, 0, 0) 62.962%,rgba(0, 0, 0, 0.5) 13.121%);
-  
+
   &__main {
-    max-width: 1031px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-basis: 60%;
-
+    flex-basis: 59%;
+  }
+  &__info {
+    flex-basis: calc(100% - 59% - 50px);
+ }
+  &__item {
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+    border: 1px solid $light;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    height: 150px;
+    position: relative;
+    margin-right: 80px;
+    &::after {
+      content: '';
+      display: block;
+      background-image: url(../images/banner-info-decor.svg);
+      width: 80px;
+      height: 151px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      right: -80px;
+    }
   }
     &__title {
     font-size: 64px;
